@@ -2,13 +2,17 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import 'dotenv/config'
-import coinsRoutes from './routes/coins.routes'
+import usersRoutes from './routes/users.routes'
+import transactionsRoutes from './routes/transactions.routes'
 
 const app = express()
 
 app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
-app.use('/api', coinsRoutes)
+app.use('/api', usersRoutes)
+app.use('/api', transactionsRoutes)
 
 /* Database config */
 mongoose.connect(`${process.env.MONGO_URI}`, {
@@ -27,6 +31,6 @@ app.use((_req, res) => {
   res.status(404).send('404... resource not found')
 })
 
-app.listen(process.env.PORT || 8010, () => {
-  console.log('listening on port 8010')
+app.listen(process.env.PORT || 8011, () => {
+  console.log('listening on port 8011')
 })
