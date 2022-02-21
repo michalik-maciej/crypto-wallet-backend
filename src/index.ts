@@ -4,7 +4,11 @@ import cors from 'cors'
 import 'dotenv/config'
 import usersRoutes from './routes/users.routes'
 import transactionsRoutes from './routes/transactions.routes'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 const app = express()
 
 app.use(cors())
@@ -13,6 +17,11 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api', usersRoutes)
 app.use('/api', transactionsRoutes)
+
+app.get('/', (_req, res) => {
+  res.sendFile(path.join(__dirname, '../../crypto-wallet/build', 'index.html'))
+})
+app.use(express.static(path.join(__dirname, '../../crypto-wallet/build')))
 
 /* Database config */
 mongoose.connect(`${process.env.MONGO_URI}`, {
