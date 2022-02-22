@@ -26,9 +26,9 @@ export const post = async (req: any, res: any) => {
       { $push: { coins: coin._id } }
     )
 
-    res.json({ message: 'transaction successfully added' })
+    return res.json({ message: 'transaction successfully added' })
   } catch (err) {
-    res.status(500).json({ message: err })
+    return res.status(500).json({ message: err })
   }
 }
 
@@ -39,9 +39,9 @@ export const getByUserId = async (req: any, res: any) => {
     })
     const { coins } = await User.findById(req.params.userId).populate('coins')
 
-    if (transactions) res.json({ transactions, coins })
-    res.status(404).json({ message: 'user not found' })
+    if (transactions) return res.json({ transactions, coins })
+    return res.status(404).json({ message: 'user not found' })
   } catch (err) {
-    res.status(500).json({ message: err })
+    return res.status(500).json({ message: err })
   }
 }

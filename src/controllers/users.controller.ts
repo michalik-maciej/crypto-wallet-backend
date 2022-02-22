@@ -18,12 +18,11 @@ export const getUser = async (req: any, res: any) => {
   try {
     const { email, password } = req.body
     const isUser = await User.find({ email })
-    if (!isUser || !isUser.length)
-      res.status(404).json({ message: 'User not found.' })
+    if (!isUser || !isUser.length) res.status(404).json('User not found.')
     else {
-      const auth = await User.findOne({ email, password }, { _id: 1 })
-      if (!auth._id) {
-        res.status(401).json({ message: 'Incorrect password. Try again.' })
+      const auth = await User.findOne({ email }, { _id: 1, password: 1 })
+      if (auth?.password !== password) {
+        res.status(401).json('Incorrect password. Try again.')
       } else
         res.json({
           message: 'User logged in successfully.',

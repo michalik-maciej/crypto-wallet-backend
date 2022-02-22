@@ -8,7 +8,8 @@
   },
   "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node dist/index.js",
+    "start": "tsc && nodemon --experimental-modules --es-module-specifier-resolution=node build/index.js",
+    "deploy": "cd ../crypto-wallet && yarn build && cd ../crypto-wallet-server && tsc && firebase deploy",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "set NODE_ENV=test && mocha \"./{,!(node_modules|client)/**/}*.test.js\"",

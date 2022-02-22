@@ -19,9 +19,9 @@ app.use('/api', usersRoutes)
 app.use('/api', transactionsRoutes)
 
 app.get('/', (_req, res) => {
-  res.sendFile(path.join(__dirname, '../../crypto-wallet/build', 'index.html'))
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
-app.use(express.static(path.join(__dirname, '../../crypto-wallet/build')))
+app.use(express.static(path.join(__dirname, 'build')))
 
 /* Database config */
 mongoose.connect(`${process.env.MONGO_URI}`, {
