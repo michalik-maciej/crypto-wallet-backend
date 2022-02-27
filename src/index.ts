@@ -24,7 +24,7 @@ app.get('/', (_req, res) => {
 app.use(express.static(path.join(__dirname, 'build')))
 
 /* Database config */
-mongoose.connect(`${process.env.MONGO_URI}`, {
+mongoose.connect('mongodb://localhost:27017/cryptoWalletDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
