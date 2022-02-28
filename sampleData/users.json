@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "621d2101a25ae82b2cf6978b"
+  },
+  "coins": [
+    "621d215320ca9cf50b44e04a",
+    "621d216e20ca9cf50b44e068",
+    "621d218620ca9cf50b44e074",
+    "621d21ad20ca9cf50b44e08e"
+  ],
+  "email": "test@e.mail",
+  "password": "1234",
+  "__v": 0
+}]

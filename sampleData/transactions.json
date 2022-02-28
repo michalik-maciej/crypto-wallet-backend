@@ -1,0 +1,79 @@
+[{
+  "_id": {
+    "$oid": "621d2153a25ae82b2cf69797"
+  },
+  "type": "deposit",
+  "coinQuantity": 0.25,
+  "pricePerCoin": 2801.67,
+  "userId": {
+    "$oid": "621d2101a25ae82b2cf6978b"
+  },
+  "timestamp": 1646076243531,
+  "coinId": "ethereum",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "621d216ea25ae82b2cf6979e"
+  },
+  "type": "deposit",
+  "coinQuantity": 12,
+  "pricePerCoin": 84.79,
+  "userId": {
+    "$oid": "621d2101a25ae82b2cf6978b"
+  },
+  "timestamp": 1646076270021,
+  "coinId": "terra-luna",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "621d2186a25ae82b2cf697a2"
+  },
+  "type": "deposit",
+  "coinQuantity": 1000,
+  "pricePerCoin": 1,
+  "userId": {
+    "$oid": "621d2101a25ae82b2cf6978b"
+  },
+  "timestamp": 1646076294559,
+  "coinId": "usd-coin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "621d218ba25ae82b2cf697a6"
+  },
+  "type": "withdraw",
+  "coinQuantity": 400,
+  "pricePerCoin": 1,
+  "userId": {
+    "$oid": "621d2101a25ae82b2cf6978b"
+  },
+  "timestamp": 1646076299831,
+  "coinId": "usd-coin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "621d21ada25ae82b2cf697ad"
+  },
+  "type": "deposit",
+  "coinQuantity": 0.02,
+  "pricePerCoin": 35500,
+  "userId": {
+    "$oid": "621d2101a25ae82b2cf6978b"
+  },
+  "timestamp": 1646076333184,
+  "coinId": "bitcoin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "621d21c7a25ae82b2cf697b4"
+  },
+  "type": "deposit",
+  "coinQuantity": 0.01,
+  "pricePerCoin": 42100,
+  "userId": {
+    "$oid": "621d2101a25ae82b2cf6978b"
+  },
+  "timestamp": 1646076358983,
+  "coinId": "bitcoin",
+  "__v": 0
+}]

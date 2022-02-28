@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "621d215320ca9cf50b44e04a"
+  },
+  "originalId": "ethereum",
+  "__v": 0,
+  "logo": "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880",
+  "name": "Ethereum",
+  "symbol": "ETH"
+},{
+  "_id": {
+    "$oid": "621d216e20ca9cf50b44e068"
+  },
+  "originalId": "terra-luna",
+  "__v": 0,
+  "logo": "https://assets.coingecko.com/coins/images/8284/large/luna1557227471663.png?1567147072",
+  "name": "Terra",
+  "symbol": "LUNA"
+},{
+  "_id": {
+    "$oid": "621d218620ca9cf50b44e074"
+  },
+  "originalId": "usd-coin",
+  "__v": 0,
+  "logo": "https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389",
+  "name": "USD Coin",
+  "symbol": "USDC"
+},{
+  "_id": {
+    "$oid": "621d21ad20ca9cf50b44e08e"
+  },
+  "originalId": "bitcoin",
+  "__v": 0,
+  "logo": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+  "name": "Bitcoin",
+  "symbol": "BTC"
+}]

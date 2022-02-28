@@ -7,11 +7,13 @@ export const ping = (_req: express.Request, res: express.Response) => {
 
 export const add = async (req: express.Request, res: express.Response) => {
   try {
+    const isUser = await User.find({ email: req.body.email })
+    if (isUser.length) return res.status(409).json('User already exists')
     const newUser = await new User({ ...req.body, coins: [] })
     await newUser.save()
-    res.json('User account created. Please login.')
+    return res.json({ message: 'User account created' })
   } catch (err) {
-    res.status(500).json({ message: err })
+    return res.status(500).json({ message: err })
   }
 }
 
