@@ -27,7 +27,7 @@ export const post = async (req: express.Request, res: express.Response) => {
       { $push: { coins: coin._id } }
     )
 
-    return res.json('transaction successfully added')
+    return res.json({ message: 'Transaction successfully added' })
   } catch (err) {
     return res.status(500).json({ message: err })
   }
